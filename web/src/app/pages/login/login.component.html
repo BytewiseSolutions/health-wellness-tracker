@@ -1,0 +1,46 @@
+<div class="auth-container">
+  <div class="auth-card">
+    <h2>Login to HealthTracker</h2>
+    <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email"
+          [(ngModel)]="email" 
+          required 
+          class="form-control"
+          placeholder="Enter your email">
+      </div>
+      
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input 
+          type="password" 
+          id="password" 
+          name="password"
+          [(ngModel)]="password" 
+          required 
+          class="form-control"
+          placeholder="Enter your password">
+      </div>
+      
+      <div class="form-options">
+        <label class="checkbox-label">
+          <input type="checkbox" [(ngModel)]="rememberMe" name="rememberMe">
+          <span>Remember me</span>
+        </label>
+        <a routerLink="/forgot-password" class="forgot-link">Forgot password?</a>
+      </div>
+      
+      <button type="submit" class="btn btn-primary btn-full" [disabled]="!loginForm.form.valid">
+        Login
+      </button>
+    </form>
+    
+    <p class="auth-link">
+      Don't have an account? <a routerLink="/register">Sign up here</a>
+    </p>
+  </div>
+</div>

@@ -141,6 +141,10 @@ body {
   #home, #features, #about, #contact {
     scroll-margin-top: 180px;
   }
+  
+  .features, .about, .contact {
+    padding-top: 10rem;
+  }
 }
 
 /* Hero Section */
@@ -191,7 +195,8 @@ body {
 
 /* Features Section */
 .features {
-  padding: 5rem 0;
+  padding-top: 8rem;
+  padding-bottom: 5rem;
   background: #f8fafc;
 }
 
@@ -242,7 +247,8 @@ body {
 
 /* About Section */
 .about {
-  padding: 5rem 0;
+  padding-top: 8rem;
+  padding-bottom: 5rem;
   background: white;
 }
 
@@ -257,7 +263,8 @@ body {
 
 /* Contact Section */
 .contact {
-  padding: 5rem 0;
+  padding-top: 8rem;
+  padding-bottom: 5rem;
   background: #1e293b;
   color: white;
   text-align: center;
@@ -277,8 +284,83 @@ body {
 .footer {
   background: #0f172a;
   color: white;
+  padding: 3rem 0 1rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+  color: #2563eb;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-section h4 {
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-section p {
+  color: #94a3b8;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #2563eb;
+}
+
+.footer-section p a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section p a:hover {
+  color: #2563eb;
+}
+
+.footer-section p a i {
+  color: white;
+  margin-right: 0.5rem;
+  display: inline;
+}
+
+.footer-section p a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-bottom {
+  border-top: 1px solid #334155;
+  padding-top: 1rem;
   text-align: center;
-  padding: 2rem 0;
+}
+
+.footer-bottom p {
+  color: #64748b;
+  margin: 0;
 }
 
 /* Responsive Design */
@@ -329,8 +411,4 @@ body {
   }
 }
 
-@media (max-width: 1024px) {
-  .features-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+
