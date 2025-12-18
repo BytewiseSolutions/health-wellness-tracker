@@ -1,0 +1,99 @@
+<div class="dashboard-layout">
+  <app-sidebar></app-sidebar>
+  <app-header></app-header>
+  
+  <div class="main-content">
+    <div class="content-wrapper">
+      <div class="dashboard-header">
+        <h1>Welcome back, {{ user?.firstName }}!</h1>
+        <p>Here's your health overview for today</p>
+      </div>
+      
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">👟</div>
+          <div class="stat-info">
+            <h3>{{ stats.steps || 0 | number }}</h3>
+            <p>Steps Today</p>
+            <span class="trend" [class.positive]="stats.stepsTrend > 0" [class.negative]="stats.stepsTrend < 0">
+              {{ stats.stepsTrend > 0 ? '+' : '' }}{{ stats.stepsTrend }}% from yesterday
+            </span>
+          </div>
+        </div>
+        
+        <div class="stat-card">
+          <div class="stat-icon">❤️</div>
+          <div class="stat-info">
+            <h3>{{ stats.heartRate }}</h3>
+            <p>Heart Rate</p>
+            <span class="trend neutral">{{ stats.heartRateStatus }}</span>
+          </div>
+        </div>
+        
+        <div class="stat-card">
+          <div class="stat-icon">😊</div>
+          <div class="stat-info">
+            <h3>{{ stats.mood }}</h3>
+            <p>Mood Today</p>
+            <span class="trend neutral">{{ stats.moodStatus }}</span>
+          </div>
+        </div>
+        
+        <div class="stat-card">
+          <div class="stat-icon">💊</div>
+          <div class="stat-info">
+            <h3>{{ stats.medicationsTaken }}/{{ stats.medicationsTotal }}</h3>
+            <p>Medications</p>
+            <span class="trend neutral">{{ stats.medicationsStatus }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="charts-grid">
+        <div class="chart-card">
+          <h3>Weekly Activity</h3>
+          <div class="chart-container">
+            <canvas baseChart
+              [data]="lineChartData"
+              [options]="lineChartOptions"
+              type="line">
+            </canvas>
+          </div>
+        </div>
+        
+        <div class="chart-card">
+          <h3>Mood Distribution</h3>
+          <div class="chart-container">
+            <canvas baseChart
+              [data]="doughnutChartData"
+              [options]="doughnutChartOptions"
+              type="doughnut">
+            </canvas>
+          </div>
+        </div>
+      </div>
+
+      <div class="quick-actions">
+        <h3>Quick Actions</h3>
+        <div class="action-grid">
+          <button class="action-btn" routerLink="/fitness">
+            <i class="fas fa-dumbbell"></i>
+            <span>Log Workout</span>
+          </button>
+          <button class="action-btn" routerLink="/mood">
+            <i class="fas fa-smile"></i>
+            <span>Track Mood</span>
+          </button>
+          <button class="action-btn" routerLink="/journal">
+            <i class="fas fa-book"></i>
+            <span>Add Journal Entry</span>
+          </button>
+          <button class="action-btn" routerLink="/medication">
+            <i class="fas fa-pills"></i>
+            <span>Take Medication</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

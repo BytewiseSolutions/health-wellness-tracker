@@ -1,0 +1,41 @@
+<div class="dashboard-layout">
+  <app-sidebar></app-sidebar>
+  <app-header></app-header>
+  
+  <div class="main-content">
+    <div class="page-header">
+      <h1>Profile Settings</h1>
+      <p>Manage your account information</p>
+    </div>
+
+    <div class="content-grid">
+      <div class="card">
+        <h3>Personal Information</h3>
+        <div class="profile-info">
+          <div class="info-row">
+            <span class="label">Name:</span>
+            <span class="value">{{ user?.firstName }} {{ user?.lastName }}</span>
+          </div>
+          <div class="info-row">
+            <span class="label">Email:</span>
+            <span class="value">{{ user?.email }}</span>
+          </div>
+          <div class="info-row">
+            <span class="label">User ID:</span>
+            <span class="value">{{ user?.userId }}</span>
+          </div>
+        </div>
+        <button class="btn-primary">Edit Profile</button>
+      </div>
+
+      <div class="card">
+        <h3>Account Settings</h3>
+        <div class="settings-list">
+          <button class="setting-item">Change Password</button>
+          <button class="setting-item">Notification Preferences</button>
+          <button class="setting-item">Privacy Settings</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

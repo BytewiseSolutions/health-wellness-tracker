@@ -1,0 +1,16 @@
+<header class="header">
+  <div class="header-content">
+    <div class="header-left">
+      <h2>HealthTracker</h2>
+    </div>
+    
+    <div class="header-right">
+      <div class="user-info">
+        <span>{{ user?.firstName }} {{ user?.lastName }}</span>
+        <button class="logout-btn" (click)="logout()">
+          <i class="fas fa-sign-out-alt"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
