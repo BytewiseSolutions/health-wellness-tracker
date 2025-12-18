@@ -28,8 +28,10 @@ export class LoginComponent {
     }).subscribe({
       next: (response) => {
         console.log('Login successful:', response);
-        // Store user data if needed
-        this.router.navigate(['/']);
+        console.log('Response keys:', Object.keys(response));
+        console.log('Role in response:', response.role);
+        localStorage.setItem('user', JSON.stringify(response));
+        this.router.navigate(['/home']);
       },
       error: (error) => {
         this.error = 'Invalid email or password';
