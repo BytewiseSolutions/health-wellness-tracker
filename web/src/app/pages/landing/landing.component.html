@@ -1,32 +1,11 @@
-<header class="header">
-  <nav class="navbar">
-    <div class="nav-brand">
-      <h2>HealthTracker</h2>
-    </div>
-    <button class="hamburger" (click)="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <div class="nav-links" [class.active]="isMenuOpen">
-      <a href="#home" class="nav-link" (click)="closeMenu()">Home</a>
-      <a href="#features" class="nav-link" (click)="closeMenu()">Features</a>
-      <a href="#about" class="nav-link" (click)="closeMenu()">About</a>
-      <a href="#contact" class="nav-link" (click)="closeMenu()">Contact</a>
-      <button class="btn btn-primary" (click)="closeMenu()">Login</button>
-      <button class="btn btn-secondary" (click)="closeMenu()">Sign Up</button>
-    </div>
-  </nav>
-</header>
-
 <main class="main">
   <section id="home" class="hero">
     <div class="hero-content">
       <h1 class="hero-title">Track Your Health Journey</h1>
       <p class="hero-subtitle">Monitor your fitness, mood, and wellness all in one place. Take control of your health with our comprehensive tracking platform.</p>
       <div class="hero-buttons">
-        <button class="btn btn-primary btn-large">Get Started</button>
-        <button class="btn btn-outline btn-large">Learn More</button>
+        <button class="btn btn-primary btn-large" (click)="getStarted()">Get Started</button>
+        <a routerLink="/features" class="btn btn-outline btn-large">Learn More</a>
       </div>
     </div>
     <div class="hero-image">
@@ -53,21 +32,7 @@
           <h3>Health Journal</h3>
           <p>Keep a personal health diary to record symptoms, thoughts, and health observations.</p>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">💊</div>
-          <h3>Medication Reminders</h3>
-          <p>Never miss a dose with smart medication reminders and tracking.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">📊</div>
-          <h3>Dashboard Overview</h3>
-          <p>Get a comprehensive view of your health progress with interactive charts and insights.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">👨‍⚕️</div>
-          <h3>Admin Panel</h3>
-          <p>Healthcare providers can manage users and monitor platform usage effectively.</p>
-        </div>
+
       </div>
     </div>
   </section>
@@ -83,15 +48,7 @@
     <div class="container">
       <h2 class="section-title">Get In Touch</h2>
       <p class="contact-text">Ready to start your health journey? Contact us to learn more about HealthTracker.</p>
-      <button class="btn btn-primary btn-large">Contact Us</button>
+      <a routerLink="/contact" class="btn btn-primary btn-large">Contact Us</a>
     </div>
   </section>
 </main>
-
-<footer class="footer">
-  <div class="container">
-    <p>&copy; 2024 HealthTracker. All rights reserved.</p>
-  </div>
-</footer>
-
-<router-outlet />
