@@ -98,8 +98,12 @@
           placeholder="Country">
       </div>
       
-      <button type="submit" class="btn btn-primary btn-full" [disabled]="!registerForm.form.valid">
-        Create Account
+      @if (error) {
+        <div class="error-message">{{ error }}</div>
+      }
+      
+      <button type="submit" class="btn btn-primary btn-full" [disabled]="!registerForm.form.valid || loading">
+        {{ loading ? 'Creating Account...' : 'Create Account' }}
       </button>
     </form>
     

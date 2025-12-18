@@ -1,5 +1,6 @@
 package com.healthtracker.api.user;
 
+import com.healthtracker.api.common.Status;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -29,7 +30,7 @@ public class UserService {
         user.setVillage(request.getVillage());
         user.setCity(request.getCity());
         user.setCountry(request.getCountry());
-        user.setStatus(request.getStatus());
+        user.setStatus(Status.ACTIVE);
 
         return userRepository.save(user);
     }
