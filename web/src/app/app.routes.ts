@@ -6,6 +6,13 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { HomeComponent } from './pages/home/home.component';
+import { FitnessComponent } from './pages/fitness/fitness.component';
+import { MoodComponent } from './pages/mood/mood.component';
+import { JournalComponent } from './pages/journal/journal.component';
+import { MedicationComponent } from './pages/medication/medication.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { AdminUsersComponent } from './pages/admin/users/users.component';
+import { AdminReportsComponent } from './pages/admin/reports/reports.component';
 
 export const routes: Routes = [
   { path: '', component: LandingComponent },
@@ -15,5 +22,12 @@ export const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'home', component: HomeComponent },
+  { path: 'fitness', component: FitnessComponent },
+  { path: 'mood', component: MoodComponent },
+  { path: 'journal', component: JournalComponent },
+  { path: 'medication', component: MedicationComponent },
+  { path: 'profile', component: ProfileComponent },
+  { path: 'admin/users', component: AdminUsersComponent },
+  { path: 'admin/reports', component: AdminReportsComponent },
   { path: '**', redirectTo: '' }
 ];

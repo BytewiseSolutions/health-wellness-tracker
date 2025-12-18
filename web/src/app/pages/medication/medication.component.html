@@ -1,0 +1,42 @@
+<div class="dashboard-layout">
+  <app-sidebar></app-sidebar>
+  <app-header></app-header>
+  
+  <div class="main-content">
+    <div class="page-header">
+      <h1>Medication Management</h1>
+      <p>Track your medications and set reminders</p>
+    </div>
+
+    <div class="content-grid">
+      <div class="card">
+        <div class="card-header">
+          <h3>Current Medications</h3>
+          <button class="btn-primary">Add Medication</button>
+        </div>
+        <div class="medication-list">
+          <p class="no-data">No medications added yet. Click "Add Medication" to get started.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Today's Schedule</h3>
+        <div class="schedule-list">
+          <p class="no-data">No medications scheduled for today.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Reminders</h3>
+        <div class="reminder-settings">
+          <label class="checkbox-label">
+            <input type="checkbox"> Enable notifications
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox"> Email reminders
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
