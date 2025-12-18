@@ -23,6 +23,11 @@ public class SecurityConfig {
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(authz -> authz
                 .requestMatchers("/api/auth/**").permitAll()
+                .requestMatchers("/api/admin/**").permitAll()
+                .requestMatchers("/api/fitness/**").permitAll()
+                .requestMatchers("/api/mood/**").permitAll()
+                .requestMatchers("/api/journal/**").permitAll()
+                .requestMatchers("/api/medication/**").permitAll()
                 .anyRequest().authenticated()
             );
         

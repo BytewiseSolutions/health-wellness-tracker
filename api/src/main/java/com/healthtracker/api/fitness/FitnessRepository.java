@@ -7,4 +7,5 @@ import java.util.List;
 @Repository
 public interface FitnessRepository extends JpaRepository<FitnessActivity, Long> {
     List<FitnessActivity> findByUserIdOrderByActivityDateDesc(Long userId);
+    List<FitnessActivity> findByUserIdOrderByCreatedAtDesc(Long userId);
 }
